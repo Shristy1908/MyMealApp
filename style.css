@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: 'poppins',sans-serif;
+    background-color: black;
+}
+nav{
+    background-color: rgb(139, 8, 8);
+    color: white;
+    width: 100%;
+    padding:0.7rem 0;
+    margin-bottom: 20px;
+    display: flex;
+}
+nav h1{
+    text-align: left;
+    margin-left: 30px;
+}
+nav span{
+    position: absolute;
+    right: 30px;
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+nav .fa-facebook{
+  margin-right: 10px;
+  color: white;
+  background-color: blue;
+  border: 1px solid blue;
+  padding: 6px 11px;
+  border-radius: 50%;
+ 
+}
+nav .fa-instagram{
+    color: red;
+    background-color: white;
+    border: 1px solid white;
+    padding: 7px 7px;
+    border-radius: 50%;
+} 
+.meal-search{
+    color: rgb(238, 180, 180);
+    margin: 2rem 0;
+}
+.btn{
+    font-family: inherit;
+    cursor: pointer;
+    outline: 0;
+    font-size: 1.05rem;
+}
+.title{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.container{
+    min-height: 100vh;
+}
+.meal-wrapper{
+    max-width: 100vw;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.meal-search-box{
+    margin: 1.2rem; 
+    color: white;
+}
+.search-content{
+    width: 40%;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 20px;
+}
+.search-btn{
+    padding: 8px 11px;
+    font-size: 20px;
+    background-color: rgb(139, 8, 8);
+    border: none;
+    color: white;
+}
+.search-btn:hover{
+   background-color: rgb(212, 69, 69);  
+}
+.meal{
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: rgb(139, 8, 8);
+    box-shadow: 0 4px 21px -12px black;
+    margin: 1rem auto;
+    width: 20%;
+    text-align: center;
+}
+.meal-img{
+    display: block;
+}
+.meal-img img{
+    margin-top: 5px;
+    width:80%;
+    height:40%;
+    border-radius: 50%;
+}
+.meal-name{
+    padding: 2rem 0rem;
+    margin: 0;
+}
+.meal-name h3{
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: white;
+}
+.meal-name .recipe-btn{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    border: 1px solid white;
+}
+.meal-name .recipe-btn:hover{
+    background-color: rgb(212, 69, 69);
+
+}
+.meal .text{
+    display: grid;
+}
+.fa-heart{
+    border: 1px solid black;
+    padding: 8px 8px;
+    border-radius: 50%;
+    background-color: black;
+    color:white;
+    cursor: pointer;
+    font-size: 30px;
+    margin-left: 60px;
+}
+.fa-heart:hover{
+    color: rgb(139, 8, 8);
+    box-shadow: 0px 0px 5px white;
+}
+
+.not-found{
+    color: rgb(128, 128, 128);
+    flex-direction: column;
+    padding: 80px 0;
+}
+
+.meal-details{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: rgb(135, 132, 132);
+    background-color: rgb(139, 8, 8);
+    border-radius: 1rem;
+    width: 80%;
+    height: 90%;
+    overflow-y: scroll;
+    padding: 2rem 0;
+    display: none;
+}
+.meal-details::-webkit-scrollbar{
+    width: 10px;
+}
+.meal-details::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 2rem;
+}
+
+/* js related */
+.showRecipe{
+    display: block;
+}
+
+.meal-details-content{
+    margin: 2rem;
+}
+.recipe-close-btn{
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+    font-size: 1.8rem;
+    background-color: white;
+    padding: 0px 12px;
+    border-radius: 50%;
+    border: none;
+    opacity: 0.9;
+}
+.recipe-title{
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+.recipe-category{
+    background: rgb(198, 193, 193);
+    color: rgb(139, 8, 8);
+    font-weight: 600;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 3px 20px;
+}
+.recipe-instruct{
+    padding: 2rem 0;
+}
+.recipe-instruct p{
+    color: rgb(202, 200, 200);
+    font-size: 16px;
+    padding: 1rem;
+}
+.recipe-meal-img img{
+    width: 300px ;
+    height:300px; 
+    border-radius: 50%; 
+    display: flex;
+    flex-wrap: wrap; 
+    margin: 0 auto;
+}
+.recipe-link{
+    margin: 1.4rem 0;
+}
+.recipe-link a{
+    color: rgb(226, 221, 221);
+    text-decoration: none;
+    border: 1px solid rgb(198, 193, 193);
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+.recipe-link a:hover{
+    background-color: rgb(198, 193, 193);
+    color: rgb(139, 8, 8);
+    font-weight: 600;
+}
+
+#list{
+    right: 0;
+    background-color: rgb(63, 63, 63);
+    margin: 50px 0;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    flex-direction: column;
+    transition: all;
+    display: none;
+}
+
+
+@media screen and (max-width:598px){
+
+   #search-input{
+        width: 70%;
+        padding: 14px 10px;
+        font-size: 17px;
+    }
+    .meal{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .meal-results .title{
+        font-size: 16px;
+    }
+   
+    #meal{
+        display: flex;
+        flex-direction: column;
+    } 
+    .title{
+        font-size: 20px;
+    }
+    .meal-name .recipe-btn{
+        font-size: 20px;
+        padding: 9px 15px;
+    }
+    nav span{
+        right: 5px;
+        padding-bottom: 16px;
+    }
+}
+
+@media screen and (max-width:768px){
+    body{
+        font-size: 10px;
+    }
+    .search-content{
+        width: 70%;
+        padding: 15px 20px;
+        font-size: 20px;
+    }
+    nav{
+        padding: 2rem 0;
+        font-size: 20px;
+    }
+    .search-btn{
+        font-size: 26px;
+    }
+    nav span{
+        position: absolute;
+        right: 15px;
+    }
+    .meal{
+        width: 80%;
+        margin: 0 auto;
+      
+    }
+     #meal{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+      
+                /* width: 100%;
+        margin: 0 auto; */
+        /* justify-content: space-between;
+         margin:0 10px ;  */
+    } 
+    nav h1{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+    nav span{
+        
+        font-size: 15px;
+    }
+    nav{
+        padding: 10px;
+    }
+}
+@media screen and (max-width:1024px),(min-width:1024px){
+    .search-content{
+        width: 50%;
+    }
+    #meal{
+        display: flex;
+        flex-wrap: wrap; 
+        gap: 1rem;
+        margin:0 6px ;
+
+    }
+}
+
+
+
+
+
